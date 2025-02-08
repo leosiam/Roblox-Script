@@ -1,0 +1,12 @@
+game.Players.PlayerAdded:Connect(function(player)
+	player.CharacterAppearanceLoaded:Connect(function(character)
+		
+		local leaderstats = Instance.new("Folder",player)
+		leaderstats.Name = "leaderstats"
+		
+		local plrGold = Instance.new("NumberValue",leaderstats)
+		plrGold.Name = "Gold"
+		plrGold.Value = 500
+		
+	end)
+end)
