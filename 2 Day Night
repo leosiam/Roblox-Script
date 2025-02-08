@@ -1,0 +1,10 @@
+# ServerScriptService
+==========================================================
+local mam = 5 * 60
+local speed = 0.01
+
+while true do
+	game.Lighting:SetMinutesAfterMidnight(mam)
+	mam += 5
+	task.wait(speed)
+end
