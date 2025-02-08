@@ -1,0 +1,20 @@
+# 3  การสัมผัสกับ วัตถุ
+========================================================
+local trigger = script.Parent
+local db = true
+trigger.Touched:Connect(function(hit)
+	
+	local char = hit.Parent
+	local hum = char:FindFirstChild("Humanoid")
+	
+	if hum and db then
+		db =false
+		print("ok")
+		trigger.BrickColor = BrickColor.Random()
+		trigger.Size += Vector3.new(5,0,5)
+		task.wait(1)
+		
+		db = true
+	end
+end)
+========================================================
